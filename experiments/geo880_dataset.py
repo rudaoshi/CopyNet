@@ -19,8 +19,13 @@ lines = 0
 
 import logging
 
-VALID_GEN = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'X', 'EQ', 'Sum', 'Count', '(', ')', 'is'}
 
+VALID_GEN = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'X',  '(', ')', 'IS', '_', ' ', 'NOT'}
+
+import itertools
+
+jb.suggest_freq(('总', '人口'), True)
+jb.suggest_freq(('总', '长度'), True)
 def read_dataset(path):
 
     f     = open(path , 'r')
@@ -28,7 +33,12 @@ def read_dataset(path):
     pairs = []
 
     while True:
-        line = f.readline().strip().decode('utf-8')
+
+        line = f.readline()
+
+        if not line: break
+
+        line = line.strip().decode('utf-8')
         if not line:
             continue
 

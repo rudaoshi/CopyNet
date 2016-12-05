@@ -4,7 +4,11 @@ import numpy as np
 import time
 import sys
 import six
-import matplotlib.pyplot as plt
+try:
+    import matplotlib.pyplot as plt
+except:
+    pass
+
 import matplotlib
 
 def get_from_module(identifier, module_params, module_name, instantiate=False, kwargs=None):

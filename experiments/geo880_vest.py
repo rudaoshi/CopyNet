@@ -103,7 +103,7 @@ else:
 print 'compile ok.'
 
 echo   = 0
-epochs = 10
+epochs = 1000
 if echo > 0:
     tmark = '20160227-164324'    # copynet multi-source model
     agent.load(config['path_h5'] + '/experiments.CopyWeibo.id={0}.epoch={1}.pkl'.format(tmark, echo))

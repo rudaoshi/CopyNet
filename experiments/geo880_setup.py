@@ -15,7 +15,7 @@ def setup():
     config['save_updates']    = True
     config['get_instance']    = True
     config['path']            = path.realpath(path.curdir)
-    config['path_h5']         = config['path'] + '/H5'
+    config['path_h5']         = config['path'] + '/model/geo880/'
     # config['dataset']         = config['path'] + '/dataset/lcsts_data-word-full.pkl'
     # config['dataset']         = config['path'] + '/dataset/weibo_data-word-cooc.pkl'
     config['dataset']         = config['path'] + '/dataset/geo880/data-word-full.pkl'
@@ -50,7 +50,7 @@ def setup():
     config['pooling']         = False
 
     config['decode_unk']      = False
-    config['utf-8']           = False
+    config['utf-8']           = True
 
     # Decoder: dimension
     config['dec_embedd_dim']  = 350  # 100
